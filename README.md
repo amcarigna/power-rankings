@@ -6,7 +6,7 @@ At the moment it functions more like a package due to the fact that it is missin
 Important public functions include:
 - `models.League.game()`, which takes game results and saves them,
 - `models.League.week_complete()`, which performs clean up tasks at the end of each "round" of the season and calls the power ranking function, and
-- `models.League.build_csv()` and `models.League.build_xlsx()` to visualize league info.
+- `models.League.build_csv()` and `models.League.build_xlsx()` to visualize league info.  
 TODOs include:
 - switch to linear model for power rankings
 - functionality for team health, qb health
