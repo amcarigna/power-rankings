@@ -1,0 +1,8 @@
+data/
+env/
+__pycache__/
+safe/
+.ipynb_checkpoints/
+power_rankings.csv
+power_rankings.xlsx
+
