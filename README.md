@@ -1,5 +1,5 @@
 # Power Rankings
-An python application for generating power rankings for a sports league. Currently in development. Developed with using the NFL (American Football) in mind.  
+A python application for generating power rankings for a sports league. Currently in development. Developed with the NFL (American Football) in mind.  
 At the moment it functions more like a package due to the fact that it is missing a user interface. I've been using Jupyter Notebook to run functions from it. The necessary functions are all present and work properly. The most important function is: `models.build_league()`, which will:
 - take a dictionary of teams to build a league for the first time, or
 - take a .json file with saved data as the season progresses.
