@@ -144,10 +144,18 @@ class League:
         header = ["Pwr Rank", "Tier", "Team", "Win", "Loss", "Tie", "Win%", "Tot Pt Diff", "SoS",
                   "Last4", "Pwr Score", "Scaled Pwr Score"
                  ]
-        for i in range(self._weeks_complete+1):
+        week = self._weeks_complete
+        for i in range(week):
             header.extend([f"Week {i+1}", f"Opp{i+1}", f"Score{i+1}", f"OppScore{i+1}"])
         data = [team.build_df() for team in self._teams.values()]
-        return pd.DataFrame(data, columns=header)
+        try:
+            df = pd.DataFrame(data, columns=header)
+        except ValueError:
+            header.extend(
+                [f"Week {week+1}", f"Opp{week+1}", f"Score{week+1}", f"OppScore{week+1}"]
+            )
+            df = pd.DataFrame(data, columns=header)
+        return df
 
 
     def build_csv(self, order='alpha'):
